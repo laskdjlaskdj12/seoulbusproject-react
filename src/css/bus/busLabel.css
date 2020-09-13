@@ -1,0 +1,137 @@
+.panel-container {
+    /*   width: 350px; */
+    display: flex;
+    background-color: #FCFCFC;
+    border-radius: 12px 12px 12px 12px;
+    margin-top: 7px;
+}
+
+.panel-container:hover{
+    z-index: -1;
+    background-color: yellow;
+}
+
+.line-skywhite {
+    width: 17px;
+    background-color: #46a4e3;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.line-orange {
+    width: 17px;
+    background-color: #db8d0d;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.line-black {
+    width: 17px;
+    background-color: #000000;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.line-green {
+    width: 17px;
+    background-color: #149260;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.line-yellow {
+    width: 17px;
+    background-color: #ecdf38;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.line-blue {
+    width: 17px;
+    background-color: #0c5e9f;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.line-orange-red {
+    width: 17px;
+    background-color: #c5480c;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.line-pink {
+    width: 17px;
+    background-color: #c05f99;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.line-red {
+    width: 17px;
+    background-color: #FF4646;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.container-name h1 {
+    display: inline;
+}
+
+.container-name {
+    margin: 12px 10px 12px 16px;
+}
+
+.badge-item {
+    display: inline;
+    /*   border: 1px solid; */
+    text-align: justify;
+    font-size: 24px;
+    vertical-align: center;
+}
+
+.first > .badge-item {
+    flex: 1;
+}
+
+.bus-badge {
+    display: inline;
+    margin-top: 10px;
+    margin-right: 4px;
+    font-size: 20px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 3px 5px 2px;
+    text-align: justify;
+    font-weight: 400;
+}
+
+.badge-space {
+    margin-bottom: 17px;
+}
+
+.container-bus-number {
+    padding-top: 2px;
+    font-size: 27px;
+    vertical-align: middle;
+    font-weight: 100;
+    margin-right: 15px;
+    /*   line-height: 12px; */
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+.id-badge {
+    display: inline;
+    font-size: 20px;
+    position: relative;
+    right: 5px;
+    left: 10px;
+}
+
+.right-buffer {
+    margin-right: 20px;
+}
+
+.container-id {
+    display: inline;
+    background-color: #aed581;
+    font-size: 20px;
+    border-radius: 10px 10px 10px 10px;
+    padding: 3px 7px 2px 5px;
+    text-align: justify;
+    font-weight: 340;
+}
+
+.first {
+    display: flex;
+}

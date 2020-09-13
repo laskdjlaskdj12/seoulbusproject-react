@@ -1,0 +1,50 @@
+.login-view {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-view-row-section {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 20px;
+    border: solid 10px black;
+}
+
+#exampleInputEmail {
+    width: 400px;
+    border-radius: 20px;
+}
+
+#exampleInputPassword {
+    width: 400px;
+    border-radius: 20px;
+}
+
+@keyframes wrong-input-animation{
+    0%{
+    }
+    40%{
+        transform: translateX(15px);
+    }
+    80%{
+        transform: translateX(0px);
+    }
+}
+
+.wrong-input{
+    border: 1px solid red;
+    animation: wrong-input-animation 0.1s infinite 0s linear;
+}
+
+/*로그인 input들을 둥글둥글하게 변경*/
+.login-id-input {
+    border-style: solid;
+    border-radius: 25%;
+}
+
+.login-item {
+    display: flex;
+    width: 300px;
+}
