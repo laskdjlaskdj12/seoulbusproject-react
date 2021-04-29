@@ -29,12 +29,11 @@ const WithPolylines = (props: any) => {
             initialCenter={{'lat': 37.6736710635, 'lng': 127.046703946}}>
             {
                 props.busLine.map((busRouteInfo: BusRoute, index: number) => {
-                    console.log(busRouteInfo)
                     return <Polyline
-                        fillColor={BusFactory.getBusColor(busRouteInfo.busType)}
+                        fillColor={busRouteInfo.line_color_code}
                         fillOpacity={0.35}
                         path={busRouteInfo.cordintaion}
-                        strokeColor={BusFactory.getBusColor(busRouteInfo.busType)}
+                        strokeColor={busRouteInfo.line_color_code}
                         strokeOpacity={1.0}
                         strokeWeight={10}
                         key={index}

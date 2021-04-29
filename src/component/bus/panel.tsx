@@ -29,6 +29,11 @@ const Panel = inject(BUSLINE_STORE)(observer((prop: PanelInjectProps) => {
         setBusID(e.currentTarget.value)
     }
 
+    const showSpecifiedClickEvent = (busLine: string) => {
+        console.log(`busNumber = ${busLine}`)
+        busLineStore!.clickBusLine(busLine)
+    }
+
     return (
         <div className="background">
             <div className="side-bar">
@@ -45,14 +50,16 @@ const Panel = inject(BUSLINE_STORE)(observer((prop: PanelInjectProps) => {
                             value = toJS(value)
                             return (<BusLabel busNumber={toJS(value).route_number} color={toJS(value).color}
                                               busType={toJS(value).busType}
-                                              key={index}/>)
+                                              key={index}
+                                              isEnable={!toJS(value).isDisable}
+                                              selectBusNumber={showSpecifiedClickEvent}/>)
                         }
                     ))}
                 </div>
             </div>
             <div className="main-view">
                 <WithPolyLinesWrapper apiKey='AIzaSyDuVkjTHcn0qFUBtOyDErDpYJxuXtOofxQ'
-                                      busLine={toJS(busLineStore!.busRouteList)}/>
+                                      busLine={toJS(busLineStore!.busRouteList.filter((value) => !value.isDisable))}/>
             </div>
         </div>
     )

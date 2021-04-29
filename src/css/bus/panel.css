@@ -55,6 +55,7 @@ body {
         border-radius: 15px 0 0 15px;
         border-color: transparent;
         text-align: center;
+        font-size: 20px;
     }
 
     #station-id-button {
@@ -130,6 +131,7 @@ body {
         border-radius: 15px 0 0 15px;
         border-color: transparent;
         text-align: center;
+        font-size: 20px;
     }
 
     #station-id-button {

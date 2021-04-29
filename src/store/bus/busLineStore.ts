@@ -47,6 +47,17 @@ export class BusLineStore {
     }
 
     @action
+    public clickBusLine(busLine:string){
+        this.busRouteList.map( (value) => {
+            if(value.route_number !== busLine){
+                return value
+            }
+
+            value.isDisable = !value.isDisable
+        })
+    }
+
+    @action
     public loadBusRoute(busStationId: string) {
         const data = {
             station_id: busStationId
@@ -73,6 +84,11 @@ export class BusLineStore {
 
                 console.log(response.data)
                 this.busRouteList = response.data
+
+                this.busRouteList.map((value)=>{
+                    value.isDisable = false
+                })
+
             })
             .catch(reason => {
                 if (reason.status !== 200) {

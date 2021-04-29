@@ -12,7 +12,9 @@ import EndBusStartBadge from "../badge/endBusStartBadge";
 interface BusLabelProps {
     busNumber: string,
     color: string,
-    busType: BusType
+    busType: BusType,
+    isEnable: boolean,
+    selectBusNumber: Function
 }
 
 const BusLabel = (props: BusLabelProps) => {
@@ -20,23 +22,23 @@ const BusLabel = (props: BusLabelProps) => {
     const busType = (busType: BusType) => {
         switch (busType) {
 
-                //지선 (초록색버스)
+            //지선 (초록색버스)
             case BusType.local:
                 return <LocalBusBadge/>
 
-                //순환 (노란색 버스)
+            //순환 (노란색 버스)
             case BusType.loop:
                 return <LoopBusBadge/>
 
-                //광역 (빨간색 버스)
+            //광역 (빨간색 버스)
             case BusType.metro:
                 return <MetroPolitanBusBadge/>
 
-                //간선 (파란색버스)
+            //간선 (파란색버스)
             case BusType.traffic:
                 return <TrafficBusBadge/>
 
-                //폐선버스 (다크레드)
+            //폐선버스 (다크레드)
             case BusType.scrapped:
                 return <ScrappedBusBadge/>
         }
@@ -44,8 +46,10 @@ const BusLabel = (props: BusLabelProps) => {
 
     const lineColor = "line-" + props.color
 
+    const disabledContainer = props.isEnable ? "panel-container" : "panel-container-disable"
+
     return (
-        <div className="panel-container">
+        <div className={disabledContainer} onClick={() => props.selectBusNumber(props.busNumber)}>
             <div className={lineColor}/>
             <div className="container-name">
                 <div className="first">

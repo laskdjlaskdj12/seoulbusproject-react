@@ -6,6 +6,13 @@
     margin-top: 7px;
 }
 
+.panel-container-disable{
+    display: flex;
+    background-color: #616161;
+    border-radius: 12px 12px 12px 12px;
+    margin-top: 7px;
+}
+
 .panel-container:hover{
     z-index: -1;
     background-color: yellow;
@@ -104,7 +111,7 @@
     padding-top: 2px;
     font-size: 27px;
     vertical-align: middle;
-    font-weight: 100;
+    font-weight: 500;
     margin-right: 15px;
     /*   line-height: 12px; */
     font-family: "Nanum Gothic", sans-serif;
