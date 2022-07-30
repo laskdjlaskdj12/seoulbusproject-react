@@ -83,7 +83,7 @@ export class BusLineStore {
                 }
 
                 console.log(response.data)
-                this.busRouteList = response.data
+                this.busRouteList = response.data.bus_route_list
 
                 this.busRouteList.map((value)=>{
                     value.isDisable = false
