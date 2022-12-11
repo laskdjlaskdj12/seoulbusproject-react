@@ -32,7 +32,7 @@ const WithPolylines = (props: any) => {
                     return <Polyline
                         fillColor={busRouteInfo.line_color_code}
                         fillOpacity={0.35}
-                        path={busRouteInfo.cordintaion}
+                        path={busRouteInfo.cordination}
                         strokeColor={busRouteInfo.line_color_code}
                         strokeOpacity={1.0}
                         strokeWeight={10}

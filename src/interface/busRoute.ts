@@ -5,6 +5,6 @@ export interface BusRoute {
     route_number: string,
     color: string,
     line_color_code: string,
-    cordintaion: cordinate[]
+    cordination: cordinate[]
     isDisable:boolean
 }
