@@ -25,7 +25,7 @@ const Panel = inject(BUSLINE_STORE)(observer((prop: PanelInjectProps) => {
         busLineStore!.loadBusRoute(busId!)
     }
 
-    const busFormimput = (e: React.FormEvent<HTMLInputElement>) => {
+    const busFormInput = (e: React.FormEvent<HTMLInputElement>) => {
         setBusID(e.currentTarget.value)
     }
 
@@ -40,7 +40,7 @@ const Panel = inject(BUSLINE_STORE)(observer((prop: PanelInjectProps) => {
                 <div className="search">
                     <form className="search-bus-station-id" onSubmit={(e) => e.preventDefault()}>
                         <input type="text" name="stationID" id="station-id-input" value={busId}
-                               onChange={busFormimput}/>
+                               onChange={busFormInput}/>
                         <input type="submit" value="🔍" id="station-id-button"
                                onClick={submitBusLine}/><br/><br/>
                     </form>
