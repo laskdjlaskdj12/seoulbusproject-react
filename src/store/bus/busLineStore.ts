@@ -27,7 +27,7 @@ export class BusLineStore {
             }
         }
 
-        Axios.get(`${BACKEND_URL}/laskdjos/bus/googleapi`,
+        Axios.get(`${BACKEND_URL}/googleapi`,
             header)
             .then(response => {
                 if (response.status !== 200) {
@@ -67,23 +67,27 @@ export class BusLineStore {
             withCredentials: true,
             headers: {
                 'Content-Type': 'application/json',
-                withCredentials: 'true',
-                credentials: 'include',
+                // withCredentials: 'true',
+                // credentials: 'include',
+                'Access-Control-Allow-Origin' : '*',
                 'Access-Control-Allow-Credentials': true,
-                'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
-                'Access-Control-Allow-Headers': "Origin, X-Requested-With, Content-Type, Accept"
+                // 'Access-Control-Allow-Methods': 'GET,PUT,POST,DELETE',
+                // 'Access-Control-Allow-Headers': "Origin, X-Requested-With, Content-Type, Accept"
             }
         }
 
-        Axios.post(`${BACKEND_URL}/laskdjos/bus/busRoute/station/search`, data, header)
+        Axios.get(`${BACKEND_URL}/station/routelist?station_id=`+busStationId)
             .then(response => {
                 if (response.status !== 200) {
                     console.log("데이터 로딩 실패")
                     return
                 }
 
+                console.log(response)
+                console.log("response data")
                 console.log(response.data)
-                this.busRouteList = response.data.bus_route_list
+                console.log(response)
+                this.busRouteList = response.data
 
                 this.busRouteList.map((value)=>{
                     value.isDisable = false
@@ -91,6 +95,11 @@ export class BusLineStore {
 
             })
             .catch(reason => {
+                console.log(reason.message)
+                console.log("response data")
+                console.log(reason.data)
+                console.log("bus station id : " + busStationId)
+                console.log("Current status : " + reason.status)
                 if (reason.status !== 200) {
                     console.log(reason.message)
                     console.log(reason.status)

@@ -48,8 +48,10 @@ const Panel = inject(BUSLINE_STORE)(observer((prop: PanelInjectProps) => {
                 <div className="station-list">
                     {busLineStore!.busRouteList.map(((value, index) => {
                             value = toJS(value)
+                            console.log("BusType")
+                            console.log(value.busType)
                             return (<BusLabel busNumber={toJS(value).route_number} color={toJS(value).color}
-                                              busType={toJS(value).busType}
+                                              busType={value.busType}
                                               key={index}
                                               isEnable={!toJS(value).isDisable}
                                               selectBusNumber={showSpecifiedClickEvent}/>)

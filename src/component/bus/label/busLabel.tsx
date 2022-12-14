@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import "../../../css/bus/busLabel.css"
 import LocalBusBadge from "../badge/localBusBadge";
 import TrafficBusBadge from "../badge/trafficBusBadge";

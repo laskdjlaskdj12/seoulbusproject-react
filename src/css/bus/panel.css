@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
 }
-#root > div > div.main-view > div > div:nth-child(1) > div > div > div > div:nth-child(1) > div:nth-child(1) > div:nth-child(5) {
+#root > div > div.main-view > div > div:nth-child(1) > div > div > div > div:nth-child(2) > div:nth-child(1) > div:nth-child(5) {
     filter: grayscale(100%);
 }
 
